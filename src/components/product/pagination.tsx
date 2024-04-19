@@ -1,5 +1,5 @@
 "use client";
-import ReactPaginate, { ReactPaginatePageChange } from "react-paginate";
+import ReactPaginate from "react-paginate";
 import { useState, useEffect } from "react";
 import { ProductForPaginator, Product } from "@/lib/utils/types";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
@@ -24,7 +24,7 @@ export default function Pagination({
   const classNames =
     "bg-white text-blue-500 hover:bg-blue-100 px-2 py-1 border cursor-pointer rounded-md appearance-none focus:outline-none focus:ring focus:border-purple-300 list-none";
 
-  const handlePageClick = (event: ReactPaginatePageChange) => {
+  const handlePageClick = (event: any) => {
     const newParams = new URLSearchParams(searchParams);
     newParams.set("page", event.selected + 1);
     const newParam2 = createUrl(pathname, newParams);
