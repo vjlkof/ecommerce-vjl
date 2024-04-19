@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Backend de ecommerce-VJL
 
-## Getting Started
+**Instalación y ejecución en local**
 
-First, run the development server:
+- clonar el repo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- npm install
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- npm run dev
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Problema encontrado:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Vienen dos registros con el mismo id desde la fuente de la información, el front se comporta como si fuera un solo registro.
+- El componente React-Paginate se comporta mal ante alguna situación particular pero esta presentable y 100% funcional.
 
-## Learn More
+# Comentarios:
 
-To learn more about Next.js, take a look at the following resources:
+- Hice algunos cambios en que y como se muestra la información para ser mas consistente con el diseño y la experiencia de usuario.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Stack que se uso:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Nextjs para performance y soporte de SSR que solventa una falencia de la libreria de React
+- "axios": "^1.6.8", para hacer fetching. Popularidad.
+- "tailwindcss": "^3.3.0", popular framework de css
+- "@headlessui/react": "^1.7.18", se complementa bien con tailwind para manejar transiciones
+- "@heroicons/react": "^2.1.3", iconos libres
+- "typescript": "^5", mejora un poco posibles errores en el front por tema de datos "@reduxjs/toolkit": "^2.2.3", popular manejador de estados, lo use porque se solicito "eslint": "^8", revision de codigo y algo de formateo
