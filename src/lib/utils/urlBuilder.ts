@@ -1,9 +1,8 @@
 import { ReadonlyURLSearchParams } from "next/navigation";
 
-const BASE_URL =
-  `${process.env.NEXT_PUBLIC_HOST_BACK}:${process.env.NEXT_PUBLIC_PORT_BACK}`
-    ? `http://${process.env.NEXT_PUBLIC_HOST_BACK}:${process.env.NEXT_PUBLIC_PORT_BACK}/`
-    : "http://localhost:5000/";
+const BASE_URL = `${process.env.NEXT_PUBLIC_BACK_BASE_URL}`
+  ? `${process.env.NEXT_PUBLIC_BACK_BASE_URL}`
+  : "http://localhost:5000/";
 
 export default function urlBuilder(
   service: string,
@@ -17,5 +16,6 @@ export default function urlBuilder(
   if (params) {
     url = url + "/?" + params;
   }
+  console.log("url", url);
   return url;
 }
