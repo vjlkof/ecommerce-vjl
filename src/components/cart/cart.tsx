@@ -64,7 +64,7 @@ export default function Cart() {
           >
             <Dialog.Panel className="fixed bottom-0 right-0 top-0 flex h-full w-full flex-col border-l border-neutral-200 bg-white/80 p-6 text-black backdrop-blur-xl md:w-[390px] dark:border-neutral-700 dark:bg-black/80 dark:text-white">
               <div className="flex items-center justify-between">
-                <p className="text-lg font-semibold">My Cart</p>
+                <p className="text-lg font-semibold">Mi carrito</p>
 
                 <button aria-label="Close cart" onClick={closeCart}>
                   <CloseCart />
@@ -75,7 +75,7 @@ export default function Cart() {
                 <div className="mt-20 flex w-full flex-col items-center justify-center overflow-hidden">
                   <ShoppingCartIcon className="h-16" />
                   <p className="mt-6 text-center text-2xl font-bold">
-                    Your cart is empty.
+                    Tu carrito está vacío.
                   </p>
                 </div>
               ) : (
