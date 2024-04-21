@@ -35,11 +35,11 @@ export const sorting: SortFilterItem[] = [
 ];
 
 export const mapMenu = new Map([
-  ["home", { title: "Home", path: "/" }],
-  ["about", { title: "Nosotros", path: "/about" }],
-  ["product-list", { title: "Tienda", path: "/product-list" }],
-  ["contact", { title: "Contacto", path: "/contact" }],
-  ["product-detail", { title: "Tienda", path: "/product-list" }],
+  ["home", { title: "Home", path: "/", show: true }],
+  ["about", { title: "Nosotros", path: "/about", show: true }],
+  ["product-list", { title: "Tienda", path: "/product-list", show: true }],
+  ["contact", { title: "Contacto", path: "/contact", show: true }],
+  ["product-detail", { title: "Tienda", path: "/product-list", show: false }],
 ]);
 
 export const TAGS = {

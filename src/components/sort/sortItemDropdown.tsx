@@ -33,7 +33,6 @@ export default function SortItemDropdown({ list }: { list: ListItem[] }) {
         setActive(() => listItem.title);
       }
     });
-    setActive(list[0].title);
   }, [pathname, list, searchParams]);
 
   return (

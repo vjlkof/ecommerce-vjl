@@ -52,19 +52,22 @@ export default async function Navbar() {
         {menu.length ? (
           <div className="hidden md:flex w-full justify-center">
             <ul className="hidden gap-6 text-sm md:flex md:items-center">
-              {menu.map((item: MenuItem) => (
-                <li
-                  key={item.title}
-                  className="border-r-2 last:border-r-0 pr-8"
-                >
-                  <Link
-                    href={item.path}
-                    className="text-neutral-800 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
+              {menu.map(
+                (item: MenuItem) =>
+                  item.show && (
+                    <li
+                      key={item.title}
+                      className="border-r-2 last:border-r-0 pr-8"
+                    >
+                      <Link
+                        href={item.path}
+                        className="text-neutral-800 underline-offset-4 hover:text-black hover:underline dark:text-neutral-400 dark:hover:text-neutral-300"
+                      >
+                        {item.title}
+                      </Link>
+                    </li>
+                  )
+              )}
             </ul>
           </div>
         ) : null}

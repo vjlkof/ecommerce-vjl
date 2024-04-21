@@ -16,6 +16,5 @@ export default function urlBuilder(
   if (params) {
     url = url + "/?" + params;
   }
-  console.log("url", url);
   return url;
 }

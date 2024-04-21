@@ -23,6 +23,7 @@ export type Image = {
 export type MenuItem = {
   title: string;
   path: string;
+  show: boolean;
 };
 
 export type MapMenu = Map<string, MenuItem>;

@@ -78,16 +78,19 @@ export default function MobileMenu({ menu }: { menu: MenuItem[] }) {
                 </div>
                 {menu.length ? (
                   <ul className="flex w-full flex-col">
-                    {menu.map((item: MenuItem) => (
-                      <li
-                        className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white"
-                        key={item.title}
-                      >
-                        <Link href={item.path} onClick={closeMobileMenu}>
-                          {item.title}
-                        </Link>
-                      </li>
-                    ))}
+                    {menu.map(
+                      (item: MenuItem) =>
+                        item.show && (
+                          <li
+                            className="py-2 text-xl text-black transition-colors hover:text-neutral-500 dark:text-white"
+                            key={item.title}
+                          >
+                            <Link href={item.path} onClick={closeMobileMenu}>
+                              {item.title}
+                            </Link>
+                          </li>
+                        )
+                    )}
                   </ul>
                 ) : null}
               </div>
