@@ -9,7 +9,7 @@ import { FilterItem } from "./item";
 export default function SortItemDropdown({ list }: { list: ListItem[] }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState(list[0].title);
   const [openSelect, setOpenSelect] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 

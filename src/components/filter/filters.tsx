@@ -38,7 +38,7 @@ export default function Filters({
             }}
           >
             <h2 className="max-sm:text-blue-600 font-bold">Filtrar por</h2>
-            <FunnelIcon className="h-6 w-6 dark:text-neutral-300 text-blue-600" />
+            <FunnelIcon className="h-6 w-6 text-blue-600" />
           </button>
           <h2 className="font-bold max-sm:hidden">Filtrar por</h2>
         </div>
