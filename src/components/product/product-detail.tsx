@@ -27,7 +27,7 @@ export default function ProductDetail({ product }: { product: Product }) {
           </h2>
           {product.contenido ? (
             <Prose
-              className="!mx-0 text-sm leading-none dark:text-white/[60%]"
+              className="!mx-0 text-sm leading-none dark:text-white/[80%]"
               html={product.contenido}
             />
           ) : null}
