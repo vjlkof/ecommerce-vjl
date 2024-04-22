@@ -23,8 +23,8 @@ export default function FilterPrice() {
       newParams.set("num_max", inputMax);
       setInputMax("");
     }
-    const newParam2 = createUrl(pathname, newParams);
-    router.push(newParam2);
+    const newURL = createUrl(pathname, newParams);
+    router.push(newURL);
   }
 
   const handleInputMin = (event: React.ChangeEvent<HTMLInputElement>) => {

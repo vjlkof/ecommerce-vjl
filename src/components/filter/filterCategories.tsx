@@ -1,4 +1,4 @@
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 import FilterItem from "./filterItem";
 import { CategoriesFilterItem } from "@/lib/utils/types";
 import Loading from "@/app/loading";
